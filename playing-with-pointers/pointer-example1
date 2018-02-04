@@ -1,0 +1,19 @@
+#include <stdio.h>
+struct exam{
+	int a;
+	char *ch;
+}st[]={10, "London", 11, "Mumbai", 12, "Warsaw", 13, "Berlin", 14, "Boston", 15, "2018"};
+
+int main(void) {
+	// your code goes here
+	struct exam *e = st;
+	printf("%s, ",e++->ch);
+	++e;
+	
+	printf("%s, ",++e->ch);
+	printf("%s, ",++e++->ch);
+	printf("%d, ",e[0].a );
+	printf("%s ",++e->ch);
+	
+	return 0;
+}
